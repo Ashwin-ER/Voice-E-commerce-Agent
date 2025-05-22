@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-A-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice E-commerce Agent (Browser Speech API)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Voice E-commerce Agent</h1>
+        <p style="text-align: center; font-style: italic;">(Using Browser Speech API for Transcription + OpenAI for Function Calls)</p>
+        <div class="controls">
+            <button id="startButton">Start Listening</button>
+            <!-- stopButton is effectively part of startButton logic via text change -->
+            <button id="stopButton" style="display: none;">Stop Session (Hidden)</button> 
+            <button id="resetButton" disabled>Reset</button>
+            <!-- Pause/Resume buttons are not used in this version -->
+            <button id="pauseButton" style="display: none;" disabled>Pause Audio</button>
+            <button id="resumeButton" style="display: none;" disabled>Resume Audio</button>
+        </div>
+        <div class="status" id="statusArea">
+            Status: Idle.
+        </div>
+
+        <h2>Live Transcript (from Browser):</h2>
+        <div id="transcriptArea" class="transcript-area"></div>
+        <button id="copyTranscriptButton" disabled>Copy Transcript</button>
+
+        <h2>Function Call Results (from OpenAI via Backend):</h2>
+        <div id="functionCallArea" class="function-call-area">
+            <p><em>Function calls will appear here...</em></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+}
+
+.controls button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+}
+
+.controls button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.controls button#resetButton { /* Specific styling for reset if needed */
+    background-color: #6c757d;
+}
+.controls button#resetButton:hover:not(:disabled) {
+    background-color: #5a6268;
+}
+
+
+.status {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-left: 5px solid #007bff;
+    font-style: italic;
+}
+
+.transcript-area, .function-call-area {
+    min-height: 100px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    overflow-y: auto;
+    max-height: 200px;
+    white-space: pre-wrap; /* Allow wrapping of long lines */
+}
+
+.transcript-area p {
+    margin: 0 0 5px 0;
+    padding: 0;
+}
+
+.function-call-area code {
+    display: block;
+    background-color: #e3e3e3;
+    padding: 8px;
+    border-radius: 4px;
+    white-space: pre-wrap; /* Ensure code block content wraps */
+    word-break: break-all; /* Break long words if necessary */
+}
+
+#copyTranscriptButton {
+    padding: 8px 12px;
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+#copyTranscriptButton:hover:not(:disabled) {
+    background-color: #138496;
+}
+
+#copyTranscriptButton:disabled {
+    background-color: #ccc;
+}
